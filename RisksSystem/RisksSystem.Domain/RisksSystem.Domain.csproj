@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\jz2yzhn0.2kn~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RisksSystem.Utils\RisksSystem.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
