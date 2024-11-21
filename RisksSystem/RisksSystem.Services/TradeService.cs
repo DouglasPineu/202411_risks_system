@@ -74,7 +74,7 @@ namespace RisksSystem.Services
             DateTime date = dateTest.ConvertToDate(out valid);
 
             if (!valid)
-                msg = "; Date incorrect. Format correct ex.: month/day/year.";
+                msg += "; Date incorrect. Format correct ex.: month/day/year.";
 
             return date;
         }

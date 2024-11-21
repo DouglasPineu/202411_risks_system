@@ -101,7 +101,7 @@ void TradeRisks(int menuOpt)
     {
         do
         {
-            valid = true;
+            valid = false;
             Console.WriteLine($"\nTrade nº: {i + 1}");
             refInput = Console.ReadLine();
             ITrade objAdd = tradeService.GetTrade();
@@ -109,7 +109,10 @@ void TradeRisks(int menuOpt)
             if (!string.IsNullOrWhiteSpace(refInput) && refInput.Contains(" "))
             {
                 string[] arrEntry = refInput.Split(" ");
-                objAdd = tradeService.ConvertData(arrEntry[0], arrEntry[1], arrEntry[2]);
+                valid = (arrEntry.Length > 3);
+
+                if (valid)
+                    objAdd = tradeService.ConvertData(arrEntry[0], arrEntry[1], arrEntry[2]);
             }
 
             if (!valid)
